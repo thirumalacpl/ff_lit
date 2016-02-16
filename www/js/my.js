@@ -26,7 +26,7 @@ function show(){
 db.transaction(function(transaction) {
 transaction.executeSql('SELECT * FROM mydata', [], function (tx, results) {
 var key = "";
-       var pair="<tr><th data-priority=\"1\"><center>Id</center></th><th data-priority=\"1\"><center>Name</center></th><th data-priority=\"2\"><center>Email</center></th><th><center>Update</center></th><th><center>Delete</center></th></tr>";
+       var pair="<tr><th data-priority=\"1\"><center>Id</center></th><th data-priority=\"1\"><center>Name</center></th><th data-priority=\"2\"><center>Email</center></th><th data-priority=\"3\"><center>Event</center></th><th><center>Update</center></th><th><center>Delete</center></th></tr>";
        var i=0;
        var len = results.rows.length, i;
        for (i=0; i<=len-1; i++) {
