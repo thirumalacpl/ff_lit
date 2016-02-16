@@ -42,9 +42,10 @@
     <gap:plugin name="org.apache.cordova.network-information" source="npm"   />
     <gap:plugin name="org.apache.cordova.splashscreen" source="npm" />
     <gap:plugin name="org.apache.cordova.vibration" source="npm"/>
-    <gap:plugin name="SQLitePlugin" value="io.liteglue.SQLitePlugin" source="npm"  />
+   <!--  <gap:plugin name="SQLitePlugin" value="io.liteglue.SQLitePlugin" source="npm"  />
      <gap:plugin name="SQLitePlugin" value="SQLitePlugin" source="npm"  />
-    <gap:plugin name="SQLitePlugin" value="com.phonegappro.sqlite.sqlitePlugin.SQLitePlugin" source="npm"  />
+    <gap:plugin name="SQLitePlugin" value="com.phonegappro.sqlite.sqlitePlugin.SQLitePlugin" source="npm" /> -->
+    <plugin name="com.brodysoft.sqliteplugin" spec="1.0.6" source="pgb" />
 
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
