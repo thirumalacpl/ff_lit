@@ -4,15 +4,16 @@ function onDeviceReady() {
   var db = window.sqlitePlugin.openDatabase({name: "my.db"});
 show();
   db.transaction(function(tx) {
-    tx.executeSql('CREATE TABLE IF NOT EXISTS mydata (id integer primary key, name text, email text)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS mydata (id integer primary key, name text, email text, eventa text)');
   });
 
 $(document).on('click', '#creat', function(){
     var name =  $("#name").val();
     var email =  $("#email").val();
+    var eventa =  $("#eventa").val();
     db.transaction(function(transaction) {
-    var executeQuery = "INSERT INTO mydata (name, email) VALUES (?,?)";
-    transaction.executeSql(executeQuery, [name,email]
+    var executeQuery = "INSERT INTO mydata (name, email, eventa) VALUES (?,?,?)";
+    transaction.executeSql(executeQuery, [name,email,eventa]
     , function(tx, result) {
        show();
     },
@@ -33,8 +34,8 @@ var key = "";
          id = results.rows.item(i).id;
          pair += "<tr><td><center>"+id+"</center></td><td><center>"+key+"</center></td><td><center>"+results.rows.item(i).email+"</center></td><td><a class=\"update\" href=\"#myPopupDialog\"  data-custom="+"'"+ id+ "'" +"data-rel=\"popup\" data-position-to=\"window\" data-transition=\"pop\"><center><i class='fa fa-pencil-square-o'></i></center></a></td><td><a  id=\"delete\" data=\""+id+"\"><center><i class='fa fa-trash'></i></center></a></td></tr>";
        }
-       if (pair == "<tr><th>Name</th><th>Email</th></tr>") {
-         pair += "<tr><td><i>empty</i></td><td><i>empty</i></td></tr>";
+       if (pair == "<tr><th>Name</th><th>Email</th><th>Event</th></tr>") {
+         pair += "<tr><td><i>empty</i></td><td><i>empty</i></td><td><i>empty</i></td></tr>";
        }
 $("#myTable").html(pair);
 }, null);
@@ -56,9 +57,10 @@ $(document).on('click', '#upd', function(){
   var id = $("#id").val();
   var name =  $("#uname").val();
   var email =  $("#uemail").val();
+   var eventa =  $("#ueventa").val();
    db.transaction(function(transaction) {
  var executeQuery = "";
- transaction.executeSql("UPDATE mydata SET name=?, email=? WHERE id=?", [name,email,id],
+ transaction.executeSql("UPDATE mydata SET name=?, email=?, eventa=? WHERE id=?", [name,email,eventa,id],
  function(tx, result) {alert('Updated successfully');
 show();
 },
@@ -69,11 +71,13 @@ $(document).on('click', '.update', function(){
  var id =  $(this).attr('data-custom');
 $("#id").val(id);
 db.transaction(function(transaction) {
-    transaction.executeSql('SELECT name,email FROM mydata where id=?', [id], function (tx, results) {
+    transaction.executeSql('SELECT name,email,eventa FROM mydata where id=?', [id], function (tx, results) {
    var name = results.rows.item(0).name;
    var email = results.rows.item(0).email;
+    var eventa = results.rows.item(0).eventa;
     $("#uname").val(name);
     $("#uemail").val(email);
+     $("#ueventa").val(eventa);
   },
   function(error){
     alert('Something went Wrong');

@@ -11,18 +11,28 @@
   <h1>Store Me</h1>
   </div>
   <div data-role="main" class="ui-content" id="main">
-  <center><p id="heading">CRUD Operations Using SQLite Plugin</p></center>
-  <center><img src="img/phonegap-sqlite-plugin-img.png"/></center>
+  <center><p id="heading">thirumal</p></center>
+ <!--  <center><img src="img/phonegap-sqlite-plugin-img.png"/></center> -->
 <div class="ui-grid-a">
     <div class="ui-block-a"><div class="ui-bar ui-bar-a">
       <center><label for="text-basic">Name</label></center>
 <input type="text" name="text-basic" id="name" placeholder="Name">
     </div></div>
     <div class="ui-block-b"><div class="ui-bar ui-bar-a">
-      <center><label for="text-basic">Email</label></center>
+      <center><label for="text-basic">Day</label></center>
 <input type="text" name="text-basic" id="email" placeholder="Email">
         </div></div>
 </div>
+<!--my code start-->
+ <div class="ui-grid-solo">
+      <div class="ui-block-a">
+      <div class="ui-bar ui-bar-a">
+      <center><label for="text-basic">Event</label></center>
+<input type="text" name="text-basic" id="eventa" placeholder="event">
+        </div>
+      </div>
+</div>
+<!--my code end-->
 <fieldset class="ui-grid-a" id="btndiv">
     <div class="ui-block-a"><div class="ui-bar ui-bar-a">
         <a href="#" id ="creat" onclick="create()">
@@ -65,8 +75,12 @@
        <td><input type="text" name="name" id="uname" placeholder="Name" value=""></td>
         </tr>
         <tr>
-        <td><label for="email">Email:</label></td>
-       <td><input type="email" name="email" id="uemail" placeholder="Enter Your New Email"></td>
+        <td><label for="email">Day:</label></td>
+       <td><input type="email" name="email" id="uemail" placeholder="Enter  day"></td>
+        </tr>
+         <tr>
+        <td><label for="eventa">Event:</label></td>
+       <td><input type="text" name="eventa" id="ueventa" placeholder="Enter Your Event"></td>
         </tr>
         </table>
       </div>
