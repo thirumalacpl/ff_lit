@@ -23,27 +23,29 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="14" />
     <preference name="android-installLocation" value="auto" />
-    <gap:plugin name="org.apache.cordova.battery-status" />
-    <gap:plugin name="org.apache.cordova.camera" />
-    <gap:plugin name="org.apache.cordova.media-capture" />
-    <gap:plugin name="org.apache.cordova.console" />
-    <gap:plugin name="org.apache.cordova.contacts" />
-    <gap:plugin name="org.apache.cordova.device" />
-    <gap:plugin name="org.apache.cordova.device-motion" />
-    <gap:plugin name="org.apache.cordova.device-orientation" />
-    <gap:plugin name="org.apache.cordova.dialogs" />
-    <gap:plugin name="org.apache.cordova.file" />
-    <gap:plugin name="org.apache.cordova.file-transfer" />
-    <gap:plugin name="org.apache.cordova.geolocation" />
-    <gap:plugin name="org.apache.cordova.globalization" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" />
-    <gap:plugin name="org.apache.cordova.media" />
-    <gap:plugin name="org.apache.cordova.network-information" />
-    <gap:plugin name="org.apache.cordova.splashscreen" />
-    <gap:plugin name="org.apache.cordova.vibration" />
-    <gap:plugin name="SQLitePlugin" value="io.liteglue.SQLitePlugin"/>
-     <gap:plugin name="SQLitePlugin" value="SQLitePlugin" />
-    <gap:plugin name="SQLitePlugin" value="com.phonegappro.sqlite.sqlitePlugin.SQLitePlugin"/>
+
+    <gap:plugin name="org.apache.cordova.battery-status" source="npm" version="1.0.0" />
+    <gap:plugin name="org.apache.cordova.camera" source="npm" version="1.0.0" />
+    <gap:plugin name="org.apache.cordova.media-capture" source="npm" version="1.0.0" />
+    <gap:plugin name="org.apache.cordova.console" source="npm" version="1.0.0" />
+    <gap:plugin name="org.apache.cordova.contacts" source="npm" version="1.0.0" />
+    <gap:plugin name="org.apache.cordova.device" source="npm" version="1.0.0" />
+    <gap:plugin name="org.apache.cordova.device-motion"  source="npm" version="1.0.0" />
+    <gap:plugin name="org.apache.cordova.device-orientation"  source="npm" version="1.0.0" />
+    <gap:plugin name="org.apache.cordova.dialogs"  source="npm" version="1.0.0" />
+    <gap:plugin name="org.apache.cordova.file" source="npm" version="1.0.0"  />
+    <gap:plugin name="org.apache.cordova.file-transfer"  source="npm" version="1.0.0" />
+    <gap:plugin name="org.apache.cordova.geolocation" source="npm" version="1.0.0"  />
+    <gap:plugin name="org.apache.cordova.globalization"  source="npm" version="1.0.0" />
+    <gap:plugin name="org.apache.cordova.inappbrowser"  source="npm" version="1.0.0" />
+    <gap:plugin name="org.apache.cordova.media" source="npm" version="1.0.0"  />
+    <gap:plugin name="org.apache.cordova.network-information" source="npm" version="1.0.0"  />
+    <gap:plugin name="org.apache.cordova.splashscreen" source="npm" version="1.0.0" />
+    <gap:plugin name="org.apache.cordova.vibration" source="npm" version="1.0.0" />
+    <gap:plugin name="SQLitePlugin" value="io.liteglue.SQLitePlugin" source="npm" version="1.0.0" />
+     <gap:plugin name="SQLitePlugin" value="SQLitePlugin" source="npm" version="1.0.0"  />
+    <gap:plugin name="SQLitePlugin" value="com.phonegappro.sqlite.sqlitePlugin.SQLitePlugin" source="npm" version="1.0.0" />
+
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
